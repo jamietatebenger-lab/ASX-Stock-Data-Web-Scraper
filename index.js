@@ -302,7 +302,7 @@ exports.helloWorld = async (req, res) => {
 
         var table2 = $("#quote-summary > div:nth-child(2) > table > tbody");
         var div = table2.find("tr:nth-child(6)>td:nth-child(2)").text();
-        let pselector = $$("#Lead-4-QuoteHeader-Proxy");
+        let pselector = $("#Lead-4-QuoteHeader-Proxy");
         SharePrice = pselector
           .find(
             "#quote-header-info > div:nth-child(3) > div > div > span:nth-child(1)"
