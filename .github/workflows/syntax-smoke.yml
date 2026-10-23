@@ -1,0 +1,18 @@
+name: Node.js offline syntax smoke
+on:
+  push:
+    branches: [ci-smoke-2026-10-23]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate package.json and source syntax (no dependencies)
+        run: npm test
